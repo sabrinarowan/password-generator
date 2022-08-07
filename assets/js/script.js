@@ -9,6 +9,10 @@ var confirmLower;
 var confirmUpper;
 var confirmNumber;
 var confirmSpecial;
+var lowerChoices;
+var upperChoices;
+var numberChoices;
+var specialChoices;
 
 // start function 
 function generatePassword () {
@@ -19,7 +23,7 @@ function generatePassword () {
     alert("Password length must be between 8 and 128 characters!");
     return generatePassword ();
   }
-  
+
   confirmLower = confirm("Click 'OK' to include lowercase letters. Click 'Cancel' to exclude lowercase letters.");
   confirmUpper = confirm("Click 'OK' to include uppercase letters. Click 'Cancel' to exclude uppercase letters.");
   confirmNumber = confirm("Click 'OK' to include numbers. Click 'Cancel' to exclude numbers.");
@@ -32,6 +36,42 @@ function generatePassword () {
     confirmNumber = confirm("Click 'OK' to include numbers. Click 'Cancel' to exclude numbers.");
     confirmSpecial = confirm("Click 'OK' to include special characters. Click 'Cancel' to exclude special characters.");
   }
+
+  if (confirmLower) {
+    lowerChoices = lowerCase.concat();
+  }
+  else {
+    lowerChoices = "";
+  }
+  if (confirmUpper) {
+    upperChoices = upperCase.concat();
+  }
+  else {
+    upperChoices = "";
+  }
+  if (confirmNumber) {
+    numberChoices = number.concat();
+  }
+  else {
+    numberChoices = "";
+  }
+  if (confirmSpecial) {
+    specialChoices = specialCharacter.concat();
+  }
+  else {
+    specialChoices = "";
+  }
+  console.log(lowerChoices)
+  console.log(upperChoices)
+  console.log(numberChoices)
+  console.log(specialChoices)
+
+  var passwordChoices = lowerChoices.concat(upperChoices, numberChoices, specialChoices);
+  console.log(passwordChoices)
+
+  var randomPassword = [];
+
+  // loop for password variations
 };
 
 // Get references to the #generate element
