@@ -36,7 +36,7 @@ function generatePassword () {
     confirmNumber = confirm("Click 'OK' to include numbers. Click 'Cancel' to exclude numbers.");
     confirmSpecial = confirm("Click 'OK' to include special characters. Click 'Cancel' to exclude special characters.");
   }
-
+  // options chosen
   if (confirmLower) {
     lowerChoices = lowerCase.concat();
   }
@@ -61,17 +61,21 @@ function generatePassword () {
   else {
     specialChoices = "";
   }
-  console.log(lowerChoices)
-  console.log(upperChoices)
-  console.log(numberChoices)
-  console.log(specialChoices)
 
+  // combine choices
   var passwordChoices = lowerChoices.concat(upperChoices, numberChoices, specialChoices);
   console.log(passwordChoices)
 
   var randomPassword = [];
 
-  // loop for password variations
+  // loop password variations
+  for (var i = 0; i < passwordLength; i++) {
+    var combinedChoices = passwordChoices[Math.floor(Math.random() * passwordChoices.length)];
+    randomPassword.push(combinedChoices);
+  }
+  // return the password
+  password = randomPassword.join("");
+  return password;  
 };
 
 // Get references to the #generate element
