@@ -13,6 +13,7 @@ Help users create a random password.
 
 ## Credits
 Starter code Provided by: https://github.com/coding-boot-camp/friendly-parakeet
+Google: w3schools.com, stackoverflow.com, codeacedemy.com, and possibly more that I may have forgotten to note. 
 
 ## Website
 https://sabrinarowan.github.io/password-generator/
